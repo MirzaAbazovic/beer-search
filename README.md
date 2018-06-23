@@ -14,23 +14,23 @@ See also form for adding beer http://www.brewerydb.com/add/beer-details/breweryI
 
 ## Step 2
  
- Use https://app.quicktype.io/to convert json into C# classes Beer.cs (and dependent classes like Style.cs) in order to create model.
+Use https://app.quicktype.io/to convert json into C# classes Beer.cs (and dependent classes like Style.cs) in order to create model.
 
- ## Step 3
+## Step 3
  
- Add projects for Beer Repositories (IRepository and is implementations: In memory, Json file, and Rest wrapper for brewerydb.com/api/v2 ) 
+Add projects for Beer Repositories (IRepository and is implementations: In memory, Json file, and Rest wrapper for brewerydb.com/api/v2 ) 
  
- Add Rest API project BeerSearch.Api and demonstrate DI with injecting different Repositories in Global.asax.cs using AutoFac as IoC Container
- Make Tests for BeerController and implement BeerController in SearchBeer.Api
- Api has search by name and get by Id functionality.
+Add Rest API project BeerSearch.Api and demonstrate DI with injecting different Repositories in Global.asax.cs using AutoFac as IoC Container
+Make Tests for BeerController and implement BeerController in SearchBeer.Api
+Api has search by name and get by Id functionality.
 
- # TODO
+# TODO
 
- ## Step 3
+## Step 3
  Implement BrewerydbBeerRepository by using HttpClient - wraper (adapter) around brewerydb.com/api/v2 (save API key in ENV variable) 
 
- ## Step 4 
+## Step 4 
  Implement UI (Angular) with search capability that shows results in grid, on row click display more details about beer. 
 
- ## Step 5 
- Implement sort and filter of the search results on client side (initially)
+## Step 5 
+Implement sort and filter of the search results on client side (initially)
