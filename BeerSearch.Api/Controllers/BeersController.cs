@@ -6,12 +6,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
-
+using System.Web.Http.Cors;
 
 namespace BeerSearch.Api.Controllers
 {
 
     [RoutePrefix("beers")]
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class BeersController : ApiController
     {
         private IBeerRepository _beerRepository;

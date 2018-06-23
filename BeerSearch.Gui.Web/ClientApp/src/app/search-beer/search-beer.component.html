@@ -1,0 +1,21 @@
+<p-panel>
+    <p-header>
+        <h3>Search for Beer</h3>
+    </p-header>
+    <div class="ui-g">
+        <div class="ui-g-10">
+            <div class="ui-inputgroup">
+                <input type="text" pInputText [(ngModel)]="nameOfBeer">
+            </div>
+        </div>
+        <div class="ui-g-2">
+            <div class="ui-inputgroup">
+                <button id="search-btn" type="button" (click)="search()" pButton label="Search"></button>
+            </div>
+        </div>
+    </div>
+</p-panel>
+
+<p-panel header="Results found {{beers?.length}}" [toggleable]="true">
+    <pre>{{beers | json}}</pre>
+</p-panel>

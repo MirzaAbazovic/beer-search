@@ -27,11 +27,11 @@ namespace BeerSearch.Api
             //builder.RegisterType<InMemoryBeerRepository>().As<IBeerRepository>();
             
             //Repository from json file in ~/App_Data/beers.json
-            //var pathToJsonFile  = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data");
-            //builder.RegisterType<JsonFileBeerRepository>().As<IBeerRepository>().WithParameter("jsonFile", Path.Combine(pathToJsonFile ,"beers.json"));
+            var pathToJsonFile  = System.Web.Hosting.HostingEnvironment.MapPath("~/App_Data");
+            builder.RegisterType<JsonFileBeerRepository>().As<IBeerRepository>().WithParameter("jsonFile", Path.Combine(pathToJsonFile ,"beers.json"));
 
             //Repository from api http://api.brewerydb.com/v2/
-            builder.RegisterType<BrewerydbBeerRepository>().As<IBeerRepository>();
+            //builder.RegisterType<BrewerydbBeerRepository>().As<IBeerRepository>();
 
             // Get your HttpConfiguration.
             var config = GlobalConfiguration.Configuration;

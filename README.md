@@ -30,11 +30,12 @@ Api has search by name and get by Id functionality.
  set BREWERYDB_KEY=SOMETHING_SECRET
  ``` 
 
+## Step 4 
+Added GUI project ASP.NET core Angular template. Used https://primefaces.org/primeng/#/ in order to "make it look good". Added simple angular service and page for searching beers by name.
+Also enabled CORS on BeerSearch.Api   
 
 # TODO
 
-## Step 4 
- Implement UI (Angular) with search capability that shows results in grid, on row click display more details about beer. 
-
 ## Step 5 
+Make diaplay of results in grid, on row click display more details about beer.
 Implement sort and filter of the search results on client side (initially)
