@@ -1,16 +1,18 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
+import { environment } from '../../environments/environment';
 @Injectable()
 export class BeerService {
-
-  constructor(private http: HttpClient) { }
+  apiUrl : string;
+  constructor(private http: HttpClient) {
+    this.apiUrl = environment.apiUrl;
+   }
 
   searchBeerByName(name: string) {
-    return this.http.get('http://localhost:64720/search/beers/'+name);
+    return this.http.get(this.apiUrl+'search/beers/'+name);
   }
 
   getBeerDetails(id: string) {
-    return this.http.get('http://localhost:64720/beers/'+id);
+    return this.http.get(this.apiUrl+'beers/'+id);
   }
 }

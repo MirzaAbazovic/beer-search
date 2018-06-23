@@ -12,6 +12,11 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import {DataViewModule} from 'primeng/dataview';
 import {PanelModule} from 'primeng/panel';
+import {TooltipModule} from 'primeng/tooltip';
+import {GrowlModule} from 'primeng/growl';
+import {TableModule} from 'primeng/table';
+import {DialogModule} from 'primeng/dialog';
+
 import { BeerService } from './services/beer.service';
 
 @NgModule({
@@ -30,6 +35,10 @@ import { BeerService } from './services/beer.service';
     ButtonModule,
     DataViewModule,
     PanelModule,
+    DialogModule,
+    TooltipModule,
+    TableModule,
+    GrowlModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'search-beer', component: SearchBeerComponent },

@@ -34,8 +34,11 @@ Api has search by name and get by Id functionality.
 Added GUI project ASP.NET core Angular template. Used https://primefaces.org/primeng/#/ in order to "make it look good". Added simple angular service and page for searching beers by name.
 Also enabled CORS on BeerSearch.Api   
 
+## Step 5 
+Display of results in grid, on click display more details about beer in modal dialog.
+
+
 # TODO
 
-## Step 5 
-Make diaplay of results in grid, on row click display more details about beer.
-Implement sort and filter of the search results on client side (initially)
+## Step 6 
+Implement paging, sort and filter of the search results on client side.

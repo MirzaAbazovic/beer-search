@@ -1,11 +1,11 @@
-<p-panel>
+<p-panel [toggleable]="true">
     <p-header>
         <h3>Search for Beer</h3>
     </p-header>
     <div class="ui-g">
         <div class="ui-g-10">
             <div class="ui-inputgroup">
-                <input type="text" pInputText [(ngModel)]="nameOfBeer">
+                <input type="text" pInputText [(ngModel)]="nameOfBeer" pTooltip="Enter beer name minimum 3 characters">
             </div>
         </div>
         <div class="ui-g-2">
@@ -15,7 +15,67 @@
         </div>
     </div>
 </p-panel>
+<p-dataView [value]="beers">
+    <p-header>
+        <p-dataViewLayoutOptions></p-dataViewLayoutOptions>
+    </p-header>
 
-<p-panel header="Results found {{beers?.length}}" [toggleable]="true">
-    <pre>{{beers | json}}</pre>
-</p-panel>
+    <ng-template let-beer pTemplate="listItem">
+            <div class="ui-g" style="padding: 2em;border-bottom: 1px solid #d9d9d9">
+                <div class="ui-g-12 ui-md-3" style="text-align:center">
+                        <img *ngIf="beer.Labels != undefined" src="{{beer.Labels.Icon}}" width="60">
+                    </div>
+                <div class="ui-g-12 ui-md-8 beer-details">
+                    <div class="ui-g">
+                        <div class="ui-g-2 ui-sm-6">Name: </div>
+                        <div class="ui-g-10 ui-sm-6"><b>{{beer.Name}}</b></div>
+    
+                        <div class="ui-g-6 ui-sm-6">Description: </div>
+                        <div class="ui-g-10 ui-sm-6"><b>{{beer.Description}}</b></div>
+                    </div>
+                </div>
+                <div class="ui-g-12 ui-md-1 search-icon">
+                    <button pButton type="button" icon="pi pi-search" (click)="selectBeer($event, beer)"></button>
+                </div>
+            </div>
+        </ng-template>
+   
+    <ng-template let-beer pTemplate="gridItem">
+        <div style="padding:.5em" class="ui-g-12 ui-md-3">
+            <p-panel [header]="beer.Name" [style]="{'text-align':'center'}">
+
+                <img *ngIf="beer.Labels != undefined" src="{{beer.Labels.Icon}}" width="60">
+
+                <hr class="ui-widget-content" style="border-top:0">
+                <button pButton type="button" icon="pi pi-search" (click)="selectBeer($event, beer)" style="margin-top:0"></button>
+            </p-panel>
+        </div>
+    </ng-template>
+</p-dataView>
+
+<p-dialog header="Beer Details" [contentStyle]="{'max-height':'1000px'}" [(visible)]="displayDialog" [responsive]="true" showEffect="fade"
+    [modal]="true" width="600" (onAfterHide)="onDialogHide()">
+    <div class="ui-g" *ngIf="selectedBeer">
+        <div class="ui-g-12" style="text-align:center">
+            <img *ngIf="selectedBeer.Labels != undefined" src="{{selectedBeer.Labels.Medium}}">
+
+        </div>
+        <div class="ui-g-4">Name: </div>
+        <div class="ui-g-8">{{selectedBeer.Name}}</div>
+
+        <div class="ui-g-4">Description: </div>
+        <div class="ui-g-8">{{selectedBeer.Description}}</div>
+
+        <div class="ui-g-4">Alcohol By Volume: </div>
+        <div class="ui-g-8">{{selectedBeer.Abv}}%</div>
+
+        <div class="ui-g-4">Category: </div>
+        <div class="ui-g-8">{{selectedBeer.Style.Category.Name}}</div>
+        <div class="ui-g-4">Category Alcohol By Volume range : </div>
+        <div class="ui-g-8">{{selectedBeer.Style.AbvMin}} - {{selectedBeer.Style.AbvMax}}</div>
+
+
+    </div>
+</p-dialog>
+
+<p-growl [(value)]="msgs"></p-growl>
