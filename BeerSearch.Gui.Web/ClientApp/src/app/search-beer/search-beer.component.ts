@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BeerService } from '../services/beer.service';
-import {Message} from 'primeng/api';
+import { Message, SelectItem } from 'primeng/api';
 
 @Component({
   selector: 'app-search-beer',
@@ -13,30 +13,50 @@ export class SearchBeerComponent implements OnInit {
   selectedBeer;
   displayDialog: boolean;
   msgs: Message[] = [];
-  constructor(private beerService : BeerService) { }
+  sortOptions: SelectItem[];
+  sortKey: string;
+  sortField: string;
+  sortOrder: number;
+  fetchingData = false;
+  constructor(private beerService: BeerService) { }
 
-  ngOnInit() {  
+  ngOnInit() {
+    this.sortOptions = [
+      { label: 'Name', value: 'Name' },
+      { label: 'Is organic', value: 'IsOrganic' }
+    ];
   }
-  search(){
-    if(this.nameOfBeer.length<3)
-    {
+  search() {
+    this.fetchingData = true;
+    this.beerService.searchBeerByName(this.nameOfBeer).subscribe(p => {
 
+      this.fetchingData = false;
+      this.beers = p;
+
+    },
+      error => {
+        this.fetchingData = false;
+        this.msgs.push({ severity: 'error', summary: 'Error Message', detail: 'There was error calling API: ' + error.error.Message });
+      });
+  }
+
+  onSortChange(event) {
+    let value = event.value;
+
+    if (value.indexOf('!') === 0) {
+      this.sortOrder = -1;
+      this.sortField = value.substring(1, value.length);
     }
-    this.beerService.searchBeerByName(this.nameOfBeer).subscribe(p => 
-      {
-        //this.msgs.push({severity:'success', summary:'Success', detail:'Search successful'});
-        this.beers = p;
-      },
-    error=>{
-      //debugger;
-      this.msgs.push({severity:'error', summary:'Error Message',  detail:'There was error calling API: '+error.error.Message});
-    });
+    else {
+      this.sortOrder = 1;
+      this.sortField = value;
+    }
   }
 
   onDialogHide() {
     this.selectedBeer = null;
-}
-  selectBeer(event, beer){
+  }
+  selectBeer(event, beer) {
     this.selectedBeer = beer;
     this.displayDialog = true;
   }

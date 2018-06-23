@@ -38,7 +38,5 @@ Also enabled CORS on BeerSearch.Api
 Display of results in grid, on click display more details about beer in modal dialog.
 
 
-# TODO
-
 ## Step 6 
-Implement paging, sort and filter of the search results on client side.
+Implemented paging, sorting by name and is beer organic. Filtering by description.

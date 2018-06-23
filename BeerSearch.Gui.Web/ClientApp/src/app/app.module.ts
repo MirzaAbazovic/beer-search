@@ -16,8 +16,9 @@ import {TooltipModule} from 'primeng/tooltip';
 import {GrowlModule} from 'primeng/growl';
 import {TableModule} from 'primeng/table';
 import {DialogModule} from 'primeng/dialog';
-
+import {DropdownModule} from 'primeng/dropdown';
 import { BeerService } from './services/beer.service';
+import {ProgressSpinnerModule} from 'primeng/progressspinner';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,9 @@ import { BeerService } from './services/beer.service';
     FormsModule,
     InputTextModule,
     ButtonModule,
+    ProgressSpinnerModule,
     DataViewModule,
+    DropdownModule,
     PanelModule,
     DialogModule,
     TooltipModule,
