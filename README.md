@@ -24,10 +24,14 @@ Add Rest API project BeerSearch.Api and demonstrate DI with injecting different 
 Make Tests for BeerController and implement BeerController in SearchBeer.Api
 Api has search by name and get by Id functionality.
 
-# TODO
-
 ## Step 3
- Implement BrewerydbBeerRepository by using HttpClient - wraper (adapter) around brewerydb.com/api/v2 (save API key in ENV variable) 
+ Implemented BrewerydbBeerRepository by using HttpClient - wraper (adapter) around brewerydb.com/api/v2 (save secret API key in ENV variable BREWERYDB_KEY)
+ ```
+ set BREWERYDB_KEY=SOMETHING_SECRET
+ ``` 
+
+
+# TODO
 
 ## Step 4 
  Implement UI (Angular) with search capability that shows results in grid, on row click display more details about beer. 
