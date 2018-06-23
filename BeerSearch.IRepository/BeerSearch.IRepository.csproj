@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7588356A-08D2-433C-9F90-9B09916171B3}</ProjectGuid>
+    <ProjectGuid>{33DF0133-000B-46E3-B55B-C9D357AEDEEF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BeerSearch.Model</RootNamespace>
-    <AssemblyName>BeerSearch.Model</AssemblyName>
+    <RootNamespace>BeerSearch.IRepository</RootNamespace>
+    <AssemblyName>BeerSearch.IRepository</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,18 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Available.cs" />
-    <Compile Include="BaseEntity.cs" />
-    <Compile Include="Beer.cs" />
-    <Compile Include="Glass.cs" />
-    <Compile Include="Label.cs" />
-    <Compile Include="PageableList.cs" />
+    <Compile Include="IBeerRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Srm.cs" />
-    <Compile Include="Style.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Diagram\ModelClassDiagram.cd" />
+    <ProjectReference Include="..\BeerSearch.Model\BeerSearch.Model.csproj">
+      <Project>{7588356a-08d2-433c-9f90-9b09916171b3}</Project>
+      <Name>BeerSearch.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

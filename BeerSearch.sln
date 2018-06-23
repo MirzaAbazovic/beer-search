@@ -5,6 +5,31 @@ VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeerSearch.Model", "BeerSearch.Model\BeerSearch.Model.csproj", "{7588356A-08D2-433C-9F90-9B09916171B3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeerSearch.IRepository", "BeerSearch.IRepository\BeerSearch.IRepository.csproj", "{33DF0133-000B-46E3-B55B-C9D357AEDEEF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C12B5574-3D27-4E51-ABD1-E2346A8F6FCD}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeerSearch.BrewerydbRepository", "BeerSearch.BrewerydbRepository\BeerSearch.BrewerydbRepository.csproj", "{06B4296F-49BD-4221-9B03-42281240C3F1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repositores", "Repositores", "{D5952639-BF1E-46E2-A5F1-77332C01E217}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{11BB3BF8-46AB-4E88-B880-04DED3C524D0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{23520ED0-FFD8-4569-A8A4-06F5ED7CC99F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeerSearch.Api", "BeerSearch.Api\BeerSearch.Api.csproj", "{B94E416A-9979-4652-A741-C05A48A44E12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeerSearch.Api.Tests", "BeerSearch.Api.Tests\BeerSearch.Api.Tests.csproj", "{3A0446CC-2A42-4F2A-A21E-5A1D9FE16CA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeerSearch.FileRepository", "BeerSearch.FileRepository\BeerSearch.FileRepository.csproj", "{0F287D25-CB88-41F8-8B76-E6B88BD9BC42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeerSearch.InMemoryRepository", "BeerSearch.InMemoryRepository\BeerSearch.InMemoryRepository.csproj", "{33C57E00-0C91-4623-B31A-DEBC49EEA27D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GUI", "GUI", "{21412B1F-7C7E-429E-8904-F35B293988E3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +40,42 @@ Global
 		{7588356A-08D2-433C-9F90-9B09916171B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7588356A-08D2-433C-9F90-9B09916171B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7588356A-08D2-433C-9F90-9B09916171B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33DF0133-000B-46E3-B55B-C9D357AEDEEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33DF0133-000B-46E3-B55B-C9D357AEDEEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33DF0133-000B-46E3-B55B-C9D357AEDEEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33DF0133-000B-46E3-B55B-C9D357AEDEEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06B4296F-49BD-4221-9B03-42281240C3F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06B4296F-49BD-4221-9B03-42281240C3F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06B4296F-49BD-4221-9B03-42281240C3F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06B4296F-49BD-4221-9B03-42281240C3F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B94E416A-9979-4652-A741-C05A48A44E12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B94E416A-9979-4652-A741-C05A48A44E12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B94E416A-9979-4652-A741-C05A48A44E12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B94E416A-9979-4652-A741-C05A48A44E12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A0446CC-2A42-4F2A-A21E-5A1D9FE16CA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A0446CC-2A42-4F2A-A21E-5A1D9FE16CA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A0446CC-2A42-4F2A-A21E-5A1D9FE16CA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A0446CC-2A42-4F2A-A21E-5A1D9FE16CA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F287D25-CB88-41F8-8B76-E6B88BD9BC42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F287D25-CB88-41F8-8B76-E6B88BD9BC42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F287D25-CB88-41F8-8B76-E6B88BD9BC42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F287D25-CB88-41F8-8B76-E6B88BD9BC42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33C57E00-0C91-4623-B31A-DEBC49EEA27D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33C57E00-0C91-4623-B31A-DEBC49EEA27D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33C57E00-0C91-4623-B31A-DEBC49EEA27D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33C57E00-0C91-4623-B31A-DEBC49EEA27D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7588356A-08D2-433C-9F90-9B09916171B3} = {11BB3BF8-46AB-4E88-B880-04DED3C524D0}
+		{33DF0133-000B-46E3-B55B-C9D357AEDEEF} = {D5952639-BF1E-46E2-A5F1-77332C01E217}
+		{06B4296F-49BD-4221-9B03-42281240C3F1} = {D5952639-BF1E-46E2-A5F1-77332C01E217}
+		{B94E416A-9979-4652-A741-C05A48A44E12} = {23520ED0-FFD8-4569-A8A4-06F5ED7CC99F}
+		{3A0446CC-2A42-4F2A-A21E-5A1D9FE16CA9} = {23520ED0-FFD8-4569-A8A4-06F5ED7CC99F}
+		{0F287D25-CB88-41F8-8B76-E6B88BD9BC42} = {D5952639-BF1E-46E2-A5F1-77332C01E217}
+		{33C57E00-0C91-4623-B31A-DEBC49EEA27D} = {D5952639-BF1E-46E2-A5F1-77332C01E217}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E92CF656-FC2B-439A-910A-F1026C6B1191}
