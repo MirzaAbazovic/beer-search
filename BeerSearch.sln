@@ -9,6 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeerSearch.IRepository", "B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C12B5574-3D27-4E51-ABD1-E2346A8F6FCD}"
 	ProjectSection(SolutionItems) = preProject
+		Description.md = Description.md
 		README.md = README.md
 	EndProjectSection
 EndProject
@@ -30,7 +31,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeerSearch.InMemoryReposito
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GUI", "GUI", "{21412B1F-7C7E-429E-8904-F35B293988E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeerSearch.Gui.Web", "BeerSearch.Gui.Web\BeerSearch.Gui.Web.csproj", "{E2C937F2-67F7-4C5A-A03B-31AF74586933}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BeerSearch.Gui.Web", "BeerSearch.Gui.Web\BeerSearch.Gui.Web.csproj", "{E2C937F2-67F7-4C5A-A03B-31AF74586933}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
