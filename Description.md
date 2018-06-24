@@ -1,4 +1,5 @@
-# Description 
+# Description of app
+
 Video of app can be seen [here](https://www.youtube.com/watch?v=VnBDtj2hxFI)
 
 In order to Run/Debug app locally 
@@ -10,6 +11,10 @@ In order to Run/Debug app locally
 3. Open solution BeerSearch.sln set up to start multiple startup projects BeerSearch.Api and BeerSearch.Gui.Web
 
 4. Hit F5
+
+# Solution
+Solution has next projects
+![Solution](https://bytebucket.org/mirza_abazovic/beersearch/raw/8adc8a8ef8eea4ed8b16f6596e95a5afcfda9ef5/solution.JPG)
 
 | Project						| Description	|
 | ------------------------------| --------------|
