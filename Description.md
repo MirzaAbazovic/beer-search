@@ -79,7 +79,7 @@ For example search for term red GET http://api.brewerydb.com/v2/search?key=XXXXX
     "status": "success"
 }
 ```
-Will hit this api 42 times to get all 2092 items.
+Will hit api.brewerydb.com/v2/search 42 times to get all 2092 items.
 
 I would "propagate" pagination from my API to brewerydb api
 
