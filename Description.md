@@ -22,7 +22,6 @@ Solution has next projects
 |BeerSearch.Api					|	Backend REST API with methods for search and get details about beer
 |BeerSearch.Api.Tests			|	Tests for Backend REST API
 |BeerSearch.IRepository			|	Interface for repository that REST API uses to get data
-|BeerSearch.IRepository			|	Has interfaces for repositories that REST API uses to get data (IBeerRespository)
 |BeerSearch.InMemoryRepository	|	Implementation of IBeerReposotory in memory data
 |BeerSearch.FileRepository		|	Implementation of IBeerReposotory in where data is in json file (file can be found in BeerSearch.Api\App_Data\beers.json)
 |BeerSearch.BrewerydbRepository	|	Implementation of IBeerReposotory where data is retrieved from REST API from http://api.brewerydb.com/v2. You need key and has to be set as env variable BREWERYDB_KEY
