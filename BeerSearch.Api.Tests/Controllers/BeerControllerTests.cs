@@ -131,7 +131,7 @@ namespace BeerSearch.Api.Tests.Controllers
         }
 
         [Fact]
-        public void SearchBeersByName_WhenIdIsLessThen3Char_ShouldReturnBadRequestWithMessage()
+        public void SearchBeersByName_WhenSearchStringIsLessThen3Characters_ShouldReturnBadRequestWithMessage()
         {
             // Arrange
             var expectedMessge = "Search by beer name must have at least three characters";
