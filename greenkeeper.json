@@ -1,0 +1,9 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "BeerSearch.Gui.Web/ClientApp/package.json"
+      ]
+    }
+  }
+}
