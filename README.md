@@ -1,4 +1,7 @@
 # Build a website about beer :) 
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/MirzaAbazovic/beer-search.svg)](https://greenkeeper.io/)
+
 You're free in choosing languages and frameworks and how much you want to use from the following API: http://www.brewerydb.com/developers/docs
 
 ## Requirements:
