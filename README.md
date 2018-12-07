@@ -1,4 +1,8 @@
 # Build a website about beer :) 
+
+
+Demo (video) of app can be seen here https://www.youtube.com/watch?v=VnBDtj2hxFI
+
 You're free in choosing languages and frameworks and how much you want to use from the following API: http://www.brewerydb.com/developers/docs
 
 ## Requirements:
